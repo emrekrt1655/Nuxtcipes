@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   future: { compatibilityVersion: 4 },
+
   experimental: {
     sharedPrerenderData: false,
     compileTemplate: true,
@@ -14,10 +15,25 @@ export default defineNuxtConfig({
       },
     },
   },
+
   unhead: {
     renderSSRHeadOptions: {
       omitLineBreaks: false,
     },
   },
+
   devtools: { enabled: true },
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@nuxt/icon",
+    "@nuxt/image",
+  ],
+
+  googleFonts: {
+    families: {
+      Montserrat: true,
+    },
+  },
+  
 });
